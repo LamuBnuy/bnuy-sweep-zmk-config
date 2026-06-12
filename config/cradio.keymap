@@ -53,6 +53,15 @@
         };
     };
 
+    macros {
+        onekeyboardtorulethemall: onekeyboardtorulethemall {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp L &kp E &kp M &kp O &kp N &kp MINUS &kp O &kp U &kp T &kp E &kp R &kp MINUS &kp L &kp E &kp A &kp R &kp N &kp MINUS &kp O &kp P &kp A &kp Q &kp U &kp E>;
+            label = "ONEKEYBOARDTORULETHEMALL";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -85,10 +94,10 @@
 
         tri_layer {
             bindings = <
-&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &trans  &trans  &trans  &trans  &sys_reset
-&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
-&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
-                             &trans      &trans          &trans  &trans
+&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &onekeyboardtorulethemall  &trans  &trans  &trans  &sys_reset
+&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans                     &trans  &trans  &trans  &bootloader
+&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans                     &trans  &trans  &trans  &trans
+                             &trans      &trans          &trans                     &trans
             >;
         };
 
